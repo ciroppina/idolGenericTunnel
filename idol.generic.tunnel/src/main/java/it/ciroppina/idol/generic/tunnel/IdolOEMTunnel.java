@@ -6,6 +6,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.StringWriter;
+import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -167,10 +168,10 @@ public class IdolOEMTunnel {
     		System.out.println("\n\t*** License Info ***\n" + getlicenseinfo("json") );
 
     		// try action=GetStatus...
-            System.out.println("\n\t*** GetStatus of the server ***\n" + getstatus());
+            //System.out.println("\n\t*** GetStatus of the server ***\n" + getstatus());
 
             /* try action=GetRequestsLog */
-    		System.out.println("\n\t*** GRL ***\n" + grl(50L) );
+    		//System.out.println("\n\t*** GRL ***\n" + grl(50L) );
         }
         catch(Exception e) {
             log.severe(e.getLocalizedMessage() + "\n");
@@ -527,6 +528,96 @@ public class IdolOEMTunnel {
 		return result;
 	}
 	
+	@WebMethod(operationName = "categorySuggestFromText")
+	public ResultList categorySuggestFromText(String text) {
+	    //debug: System.out.println("\n\t ACIService - about to query IDOL server with text= : \n\t" + text);
+	    
+		Map<String, String> pList = new HashMap<>();
+		pList.put("action", "categorySuggestFromText");
+	    pList.put("NumResults", "5");
+	    pList.put("IncludeTopLevel", "true");
+	    pList.put("ShowCategoryPath", "true");
+	    pList.put("FullPathOnly", "true");
+	    pList.put("AgentBoolean", "false");
+	    pList.put("IgnoreSpecials", "true");
+	    pList.put("MaxQueryTerms", "250");
+	    pList.put("Params", "sort");
+	    pList.put("Values", "relevance");
+	    pList.put("Threshold", "1");
+	    
+	    /** pulizia del testo (&, ~, ...), da attivare se &IgnoreSpecials=false */
+//	    text = text.replaceAll("\\s{2,}", " ")
+//	    		   .replaceAll("[\\n\\r()\\[\\]\\{\\}&<>'~\"^]{1,}", " ") .trim();
+
+	    byte[] buf = Charset.forName("UTF-8").encode(text).array();
+	    text = new String (buf, StandardCharsets.UTF_8);
+	    
+	    //debug: System.out.println("\n\n\t" + text + "\n\n");
+	    pList.put("QueryText", text.replace("\n", " ") .trim());
+
+	    return this.idolResponse(pList);
+	}
+	
+	/**
+	 * Utilities
+	 */
+	
+	/**
+	 * Accetta qualsiasi ACI action per l'IDOL Server
+	 * nel caso sia presente il parametro &template
+	 * ritorna la pagina Html prodotta dallo stylesheet,
+	 * altrimenti lo xml dell'AutnResponse
+	 * 
+	 * @param pList: la lista dei paramwetri dell'action
+	 * @return una stringa xml, l'AUTNRESPONSE, o Html
+	 */
+	private ResultList idolResponse(Map<String, String> pList) {
+		ResultList result = new ResultList();
+		String autnresponse = autnResponseAsString(pList, "xml"); //fixed format
+
+		try {
+			Document dom = getDocumentFrom(autnresponse);
+			
+			String response = dom.getElementsByTagName("response").item(0).getTextContent();
+			NodeList hits = null;
+			if (response .toLowerCase().contains("success")) {
+				hits = dom.getElementsByTagName("autn:hit");
+				int q = hits.getLength();
+				for (int i = 0; i < q; i++) {
+					String  label = "";
+					Element hit = (Element) hits.item(i);
+					label = hit.getElementsByTagName("autn:weight").item(0).getTextContent();
+					label += " % - ";
+					label += hit.getElementsByTagName("autn:title").item(0).getTextContent();
+					label = label.trim().toUpperCase();
+					
+					String key = "";
+					key = hit.getElementsByTagName("autn:id").item(0).getTextContent();
+					key = key.trim().toUpperCase();
+					
+					IdolCategoryResultObject o = new IdolCategoryResultObject(
+							hit.getElementsByTagName("autn:weight").item(0).getTextContent(), 
+							hit.getElementsByTagName("autn:title").item(0).getTextContent(), 
+							hit.getElementsByTagName("autn:id").item(0).getTextContent()
+					);
+					
+					result.add(o);
+				}
+			} else {
+				System.err.println("\t\n ACIWebService - non ci sono hits!");
+			}
+			
+		} catch (AciErrorException e) {
+			System.err.println("\n\t ACIWebService - AciErrorException occurred:" 
+				+ e.getMessage() + "\n");
+			e.printStackTrace();
+		}
+
+		//debug: System.out.println( result.toString() );
+		return result;
+	}
+
+
 	private Document getDocumentFrom(String xml){
 		DocumentBuilderFactory documentFactory = DocumentBuilderFactory.newInstance(); 
 		DocumentBuilder builder = null;
