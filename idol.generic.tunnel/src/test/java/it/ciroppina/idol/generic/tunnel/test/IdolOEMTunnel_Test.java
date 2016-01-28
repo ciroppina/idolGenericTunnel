@@ -4,12 +4,15 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 import it.ciroppina.idol.generic.tunnel.ErrorResponse;
 import it.ciroppina.idol.generic.tunnel.Hit;
+import it.ciroppina.idol.generic.tunnel.IdolCategoryResultObject;
 import it.ciroppina.idol.generic.tunnel.IdolOEMTunnel;
+import it.ciroppina.idol.generic.tunnel.ResultList;
 
 import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 
 import org.junit.After;
@@ -365,6 +368,19 @@ public class IdolOEMTunnel_Test {
 		);
 	}
 	
+	@Test
+	public void testCategorySuggestFromText() throws Exception {
+		
+		ResultList rlist = ic.categorySuggestFromText("Esito delle indagini preliminari");
+		List<IdolCategoryResultObject> list = rlist.getReturnList();
+		
+		for (IdolCategoryResultObject cat : list) {
+			String catData = cat.getRilevanza() +"% "+ cat.getId() + " - " + cat.getTitolo();
+			System.out.println(catData);
+			assertTrue("Should be a Double", Double.parseDouble(cat.getRilevanza()) > 1d);
+		}
+	}
+
 	/**
 	 * Utilities
 	 */

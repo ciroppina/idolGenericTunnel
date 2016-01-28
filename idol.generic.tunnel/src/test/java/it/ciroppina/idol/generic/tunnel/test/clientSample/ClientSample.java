@@ -1,8 +1,10 @@
 package it.ciroppina.idol.generic.tunnel.test.clientSample;
 
 import it.ciroppina.idol.generic.tunnel.wsclient.Hit;
+import it.ciroppina.idol.generic.tunnel.wsclient.IdolCategoryResultObject;
 import it.ciroppina.idol.generic.tunnel.wsclient.IdolOEMTunnel;
 import it.ciroppina.idol.generic.tunnel.wsclient.IdolOEMTunnel_Service;
+import it.ciroppina.idol.generic.tunnel.wsclient.ResultList;
 
 import java.util.HashMap;
 import java.util.List;
@@ -50,13 +52,28 @@ public class ClientSample {
 		ic = new IdolOEMTunnel_Service().getIdolOEMTunnelPort();
 		aQueryReturningListOfHits(ic);
 		
-        System.out.println("***********************");
+		//action categorySuggestFromText web-method
+		ic = new IdolOEMTunnel_Service().getIdolOEMTunnelPort();
+		actionCategorySuggestFromText(ic);
+
+		System.out.println("***********************");
         System.out.println("Call Over on IDOL server" + "!");
         /**
          * console output ends here
          */
 	}
 	
+	public static void actionCategorySuggestFromText(IdolOEMTunnel ic) {
+		ResultList list = ic.categorySuggestFromText("Tribunale di Nola Esito delle indagini preliminari");
+		List<IdolCategoryResultObject> rl = list.getReturnList();
+		
+		for (IdolCategoryResultObject cat : rl) {
+			System.out.println(cat.getRilevanza() 
+				+ " " + cat.getId() 
+				+ " - " + cat.getTitolo());
+		}
+	}
+
 	/**
 	 * an ACTION=QUERY that returns 25 Hit(s) objects
 	 * <br/>
