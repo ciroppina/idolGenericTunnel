@@ -26,33 +26,36 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _GetstatusResponse_QNAME = new QName("http://tunnel.generic.idol.ciroppina.it/", "getstatusResponse");
-    private final static QName _GetQueryHitsMapResponse_QNAME = new QName("http://tunnel.generic.idol.ciroppina.it/", "getQueryHitsMapResponse");
     private final static QName _AutnResponseAsListResponse_QNAME = new QName("http://tunnel.generic.idol.ciroppina.it/", "autnResponseAsListResponse");
     private final static QName _GetSpellCheck_QNAME = new QName("http://tunnel.generic.idol.ciroppina.it/", "getSpellCheck");
-    private final static QName _GetSpellCheckFields_QNAME = new QName("http://tunnel.generic.idol.ciroppina.it/", "getSpellCheckFields");
     private final static QName _Getstatus_QNAME = new QName("http://tunnel.generic.idol.ciroppina.it/", "getstatus");
-    private final static QName _GetHitIndexedContent_QNAME = new QName("http://tunnel.generic.idol.ciroppina.it/", "getHitIndexedContent");
     private final static QName _GetSpellCheckResponse_QNAME = new QName("http://tunnel.generic.idol.ciroppina.it/", "getSpellCheckResponse");
-    private final static QName _Grl_QNAME = new QName("http://tunnel.generic.idol.ciroppina.it/", "grl");
     private final static QName _GetlicenseinfoResponse_QNAME = new QName("http://tunnel.generic.idol.ciroppina.it/", "getlicenseinfoResponse");
     private final static QName _GetQueryResponse_QNAME = new QName("http://tunnel.generic.idol.ciroppina.it/", "getQueryResponse");
+    private final static QName _CategorySuggestFromTextResponse_QNAME = new QName("http://tunnel.generic.idol.ciroppina.it/", "categorySuggestFromTextResponse");
+    private final static QName _GetQueryHitsMap_QNAME = new QName("http://tunnel.generic.idol.ciroppina.it/", "getQueryHitsMap");
+    private final static QName _GetSpellCheckFieldsResponse_QNAME = new QName("http://tunnel.generic.idol.ciroppina.it/", "getSpellCheckFieldsResponse");
+    private final static QName _GetQueryHitsNoDocumentMapResponse_QNAME = new QName("http://tunnel.generic.idol.ciroppina.it/", "getQueryHitsNoDocumentMapResponse");
+    private final static QName _GetQueryHitsNoDocumentMap_QNAME = new QName("http://tunnel.generic.idol.ciroppina.it/", "getQueryHitsNoDocumentMap");
+    private final static QName _Getversion_QNAME = new QName("http://tunnel.generic.idol.ciroppina.it/", "getversion");
+    private final static QName _GetversionResponse_QNAME = new QName("http://tunnel.generic.idol.ciroppina.it/", "getversionResponse");
+    private final static QName _GetstatusResponse_QNAME = new QName("http://tunnel.generic.idol.ciroppina.it/", "getstatusResponse");
+    private final static QName _GetQueryHitsMapResponse_QNAME = new QName("http://tunnel.generic.idol.ciroppina.it/", "getQueryHitsMapResponse");
+    private final static QName _GetSpellCheckFields_QNAME = new QName("http://tunnel.generic.idol.ciroppina.it/", "getSpellCheckFields");
+    private final static QName _GetHitIndexedContent_QNAME = new QName("http://tunnel.generic.idol.ciroppina.it/", "getHitIndexedContent");
+    private final static QName _Grl_QNAME = new QName("http://tunnel.generic.idol.ciroppina.it/", "grl");
     private final static QName _GetHitIndexedContentResponse_QNAME = new QName("http://tunnel.generic.idol.ciroppina.it/", "getHitIndexedContentResponse");
     private final static QName _GrlResponse_QNAME = new QName("http://tunnel.generic.idol.ciroppina.it/", "grlResponse");
     private final static QName _AutnResponseAsString_QNAME = new QName("http://tunnel.generic.idol.ciroppina.it/", "autnResponseAsString");
-    private final static QName _GetQueryHitsMap_QNAME = new QName("http://tunnel.generic.idol.ciroppina.it/", "getQueryHitsMap");
-    private final static QName _GetSpellCheckFieldsResponse_QNAME = new QName("http://tunnel.generic.idol.ciroppina.it/", "getSpellCheckFieldsResponse");
     private final static QName _AutnResponseAsStringResponse_QNAME = new QName("http://tunnel.generic.idol.ciroppina.it/", "autnResponseAsStringResponse");
     private final static QName _AutnResponseAsList_QNAME = new QName("http://tunnel.generic.idol.ciroppina.it/", "autnResponseAsList");
-    private final static QName _GetQueryHitsNoDocumentMap_QNAME = new QName("http://tunnel.generic.idol.ciroppina.it/", "getQueryHitsNoDocumentMap");
-    private final static QName _GetQueryHitsNoDocumentMapResponse_QNAME = new QName("http://tunnel.generic.idol.ciroppina.it/", "getQueryHitsNoDocumentMapResponse");
-    private final static QName _Getversion_QNAME = new QName("http://tunnel.generic.idol.ciroppina.it/", "getversion");
     private final static QName _GetQueryResponseResponse_QNAME = new QName("http://tunnel.generic.idol.ciroppina.it/", "getQueryResponseResponse");
-    private final static QName _GetversionResponse_QNAME = new QName("http://tunnel.generic.idol.ciroppina.it/", "getversionResponse");
     private final static QName _Getlicenseinfo_QNAME = new QName("http://tunnel.generic.idol.ciroppina.it/", "getlicenseinfo");
+    private final static QName _CategorySuggestFromText_QNAME = new QName("http://tunnel.generic.idol.ciroppina.it/", "categorySuggestFromText");
 
     /**
-     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: it.ciroppina.idol.generic.tunnel.wsclient
+     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: 
+     * it.ciroppina.idol.generic.tunnel.wsclient
      * 
      */
     public ObjectFactory() {
@@ -67,7 +70,7 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link HashMap<String, String> }
+     * Create an instance of {@link Hit.DreFields }
      * 
      */
     public HashMap<String, String> createHitDreFields() {
@@ -83,7 +86,7 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link HashMap<String, String> }
+     * Create an instance of {@link GetSpellCheck.Arg0 }
      * 
      */
     public HashMap<String, String> createGetSpellCheckArg0() {
@@ -99,7 +102,7 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link HashMap<String, String> }
+     * Create an instance of {@link GetHitIndexedContent.Arg0 }
      * 
      */
     public HashMap<String, String> createGetHitIndexedContentArg0() {
@@ -115,7 +118,7 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link HashMap<String, String> }
+     * Create an instance of {@link AutnResponseAsString.Arg0 }
      * 
      */
     public HashMap<String, String> createAutnResponseAsStringArg0() {
@@ -131,35 +134,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link HashMap<String, String> }
+     * Create an instance of {@link AutnResponseAsList.Arg0 }
      * 
      */
     public HashMap<String, String> createAutnResponseAsListArg0() {
         return new HashMap<String, String>();
-    }
-
-    /**
-     * Create an instance of {@link GetQueryHitsNoDocumentMap }
-     * 
-     */
-    public GetQueryHitsNoDocumentMap createGetQueryHitsNoDocumentMap() {
-        return new GetQueryHitsNoDocumentMap();
-    }
-
-    /**
-     * Create an instance of {@link GetQueryHitsNoDocumentMapResponse }
-     * 
-     */
-    public GetQueryHitsNoDocumentMapResponse createGetQueryHitsNoDocumentMapResponse() {
-        return new GetQueryHitsNoDocumentMapResponse();
-    }
-
-    /**
-     * Create an instance of {@link Getversion }
-     * 
-     */
-    public Getversion createGetversion() {
-        return new Getversion();
     }
 
     /**
@@ -171,11 +150,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GetversionResponse }
+     * Create an instance of {@link CategorySuggestFromText }
      * 
      */
-    public GetversionResponse createGetversionResponse() {
-        return new GetversionResponse();
+    public CategorySuggestFromText createCategorySuggestFromText() {
+        return new CategorySuggestFromText();
     }
 
     /**
@@ -184,14 +163,6 @@ public class ObjectFactory {
      */
     public Getlicenseinfo createGetlicenseinfo() {
         return new Getlicenseinfo();
-    }
-
-    /**
-     * Create an instance of {@link GetSpellCheckFieldsResponse }
-     * 
-     */
-    public GetSpellCheckFieldsResponse createGetSpellCheckFieldsResponse() {
-        return new GetSpellCheckFieldsResponse();
     }
 
     /**
@@ -211,14 +182,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GetQueryHitsMap }
-     * 
-     */
-    public GetQueryHitsMap createGetQueryHitsMap() {
-        return new GetQueryHitsMap();
-    }
-
-    /**
      * Create an instance of {@link GetHitIndexedContentResponse }
      * 
      */
@@ -227,19 +190,99 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GetQueryResponse }
-     * 
-     */
-    public GetQueryResponse createGetQueryResponse() {
-        return new GetQueryResponse();
-    }
-
-    /**
      * Create an instance of {@link Grl }
      * 
      */
     public Grl createGrl() {
         return new Grl();
+    }
+
+    /**
+     * Create an instance of {@link GetSpellCheckFields }
+     * 
+     */
+    public GetSpellCheckFields createGetSpellCheckFields() {
+        return new GetSpellCheckFields();
+    }
+
+    /**
+     * Create an instance of {@link GetstatusResponse }
+     * 
+     */
+    public GetstatusResponse createGetstatusResponse() {
+        return new GetstatusResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetQueryHitsMapResponse }
+     * 
+     */
+    public GetQueryHitsMapResponse createGetQueryHitsMapResponse() {
+        return new GetQueryHitsMapResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetQueryHitsNoDocumentMapResponse }
+     * 
+     */
+    public GetQueryHitsNoDocumentMapResponse createGetQueryHitsNoDocumentMapResponse() {
+        return new GetQueryHitsNoDocumentMapResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetQueryHitsNoDocumentMap }
+     * 
+     */
+    public GetQueryHitsNoDocumentMap createGetQueryHitsNoDocumentMap() {
+        return new GetQueryHitsNoDocumentMap();
+    }
+
+    /**
+     * Create an instance of {@link Getversion }
+     * 
+     */
+    public Getversion createGetversion() {
+        return new Getversion();
+    }
+
+    /**
+     * Create an instance of {@link GetversionResponse }
+     * 
+     */
+    public GetversionResponse createGetversionResponse() {
+        return new GetversionResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetSpellCheckFieldsResponse }
+     * 
+     */
+    public GetSpellCheckFieldsResponse createGetSpellCheckFieldsResponse() {
+        return new GetSpellCheckFieldsResponse();
+    }
+
+    /**
+     * Create an instance of {@link CategorySuggestFromTextResponse }
+     * 
+     */
+    public CategorySuggestFromTextResponse createCategorySuggestFromTextResponse() {
+        return new CategorySuggestFromTextResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetQueryHitsMap }
+     * 
+     */
+    public GetQueryHitsMap createGetQueryHitsMap() {
+        return new GetQueryHitsMap();
+    }
+
+    /**
+     * Create an instance of {@link GetQueryResponse }
+     * 
+     */
+    public GetQueryResponse createGetQueryResponse() {
+        return new GetQueryResponse();
     }
 
     /**
@@ -267,14 +310,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GetSpellCheckFields }
-     * 
-     */
-    public GetSpellCheckFields createGetSpellCheckFields() {
-        return new GetSpellCheckFields();
-    }
-
-    /**
      * Create an instance of {@link Getstatus }
      * 
      */
@@ -283,37 +318,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GetstatusResponse }
+     * Create an instance of {@link IdolCategoryResultObject }
      * 
      */
-    public GetstatusResponse createGetstatusResponse() {
-        return new GetstatusResponse();
+    public IdolCategoryResultObject createIdolCategoryResultObject() {
+        return new IdolCategoryResultObject();
     }
 
     /**
-     * Create an instance of {@link GetQueryHitsMapResponse }
+     * Create an instance of {@link ResultList }
      * 
      */
-    public GetQueryHitsMapResponse createGetQueryHitsMapResponse() {
-        return new GetQueryHitsMapResponse();
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetstatusResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://tunnel.generic.idol.ciroppina.it/", name = "getstatusResponse")
-    public JAXBElement<GetstatusResponse> createGetstatusResponse(GetstatusResponse value) {
-        return new JAXBElement<GetstatusResponse>(_GetstatusResponse_QNAME, GetstatusResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetQueryHitsMapResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://tunnel.generic.idol.ciroppina.it/", name = "getQueryHitsMapResponse")
-    public JAXBElement<GetQueryHitsMapResponse> createGetQueryHitsMapResponse(GetQueryHitsMapResponse value) {
-        return new JAXBElement<GetQueryHitsMapResponse>(_GetQueryHitsMapResponse_QNAME, GetQueryHitsMapResponse.class, null, value);
+    public ResultList createResultList() {
+        return new ResultList();
     }
 
     /**
@@ -335,15 +352,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetSpellCheckFields }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://tunnel.generic.idol.ciroppina.it/", name = "getSpellCheckFields")
-    public JAXBElement<GetSpellCheckFields> createGetSpellCheckFields(GetSpellCheckFields value) {
-        return new JAXBElement<GetSpellCheckFields>(_GetSpellCheckFields_QNAME, GetSpellCheckFields.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link Getstatus }{@code >}}
      * 
      */
@@ -353,30 +361,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetHitIndexedContent }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://tunnel.generic.idol.ciroppina.it/", name = "getHitIndexedContent")
-    public JAXBElement<GetHitIndexedContent> createGetHitIndexedContent(GetHitIndexedContent value) {
-        return new JAXBElement<GetHitIndexedContent>(_GetHitIndexedContent_QNAME, GetHitIndexedContent.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link GetSpellCheckResponse }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://tunnel.generic.idol.ciroppina.it/", name = "getSpellCheckResponse")
     public JAXBElement<GetSpellCheckResponse> createGetSpellCheckResponse(GetSpellCheckResponse value) {
         return new JAXBElement<GetSpellCheckResponse>(_GetSpellCheckResponse_QNAME, GetSpellCheckResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Grl }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://tunnel.generic.idol.ciroppina.it/", name = "grl")
-    public JAXBElement<Grl> createGrl(Grl value) {
-        return new JAXBElement<Grl>(_Grl_QNAME, Grl.class, null, value);
     }
 
     /**
@@ -395,6 +385,114 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://tunnel.generic.idol.ciroppina.it/", name = "getQueryResponse")
     public JAXBElement<GetQueryResponse> createGetQueryResponse(GetQueryResponse value) {
         return new JAXBElement<GetQueryResponse>(_GetQueryResponse_QNAME, GetQueryResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link CategorySuggestFromTextResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tunnel.generic.idol.ciroppina.it/", name = "categorySuggestFromTextResponse")
+    public JAXBElement<CategorySuggestFromTextResponse> createCategorySuggestFromTextResponse(CategorySuggestFromTextResponse value) {
+        return new JAXBElement<CategorySuggestFromTextResponse>(_CategorySuggestFromTextResponse_QNAME, CategorySuggestFromTextResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetQueryHitsMap }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tunnel.generic.idol.ciroppina.it/", name = "getQueryHitsMap")
+    public JAXBElement<GetQueryHitsMap> createGetQueryHitsMap(GetQueryHitsMap value) {
+        return new JAXBElement<GetQueryHitsMap>(_GetQueryHitsMap_QNAME, GetQueryHitsMap.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetSpellCheckFieldsResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tunnel.generic.idol.ciroppina.it/", name = "getSpellCheckFieldsResponse")
+    public JAXBElement<GetSpellCheckFieldsResponse> createGetSpellCheckFieldsResponse(GetSpellCheckFieldsResponse value) {
+        return new JAXBElement<GetSpellCheckFieldsResponse>(_GetSpellCheckFieldsResponse_QNAME, GetSpellCheckFieldsResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetQueryHitsNoDocumentMapResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tunnel.generic.idol.ciroppina.it/", name = "getQueryHitsNoDocumentMapResponse")
+    public JAXBElement<GetQueryHitsNoDocumentMapResponse> createGetQueryHitsNoDocumentMapResponse(GetQueryHitsNoDocumentMapResponse value) {
+        return new JAXBElement<GetQueryHitsNoDocumentMapResponse>(_GetQueryHitsNoDocumentMapResponse_QNAME, GetQueryHitsNoDocumentMapResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetQueryHitsNoDocumentMap }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tunnel.generic.idol.ciroppina.it/", name = "getQueryHitsNoDocumentMap")
+    public JAXBElement<GetQueryHitsNoDocumentMap> createGetQueryHitsNoDocumentMap(GetQueryHitsNoDocumentMap value) {
+        return new JAXBElement<GetQueryHitsNoDocumentMap>(_GetQueryHitsNoDocumentMap_QNAME, GetQueryHitsNoDocumentMap.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Getversion }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tunnel.generic.idol.ciroppina.it/", name = "getversion")
+    public JAXBElement<Getversion> createGetversion(Getversion value) {
+        return new JAXBElement<Getversion>(_Getversion_QNAME, Getversion.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetversionResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tunnel.generic.idol.ciroppina.it/", name = "getversionResponse")
+    public JAXBElement<GetversionResponse> createGetversionResponse(GetversionResponse value) {
+        return new JAXBElement<GetversionResponse>(_GetversionResponse_QNAME, GetversionResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetstatusResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tunnel.generic.idol.ciroppina.it/", name = "getstatusResponse")
+    public JAXBElement<GetstatusResponse> createGetstatusResponse(GetstatusResponse value) {
+        return new JAXBElement<GetstatusResponse>(_GetstatusResponse_QNAME, GetstatusResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetQueryHitsMapResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tunnel.generic.idol.ciroppina.it/", name = "getQueryHitsMapResponse")
+    public JAXBElement<GetQueryHitsMapResponse> createGetQueryHitsMapResponse(GetQueryHitsMapResponse value) {
+        return new JAXBElement<GetQueryHitsMapResponse>(_GetQueryHitsMapResponse_QNAME, GetQueryHitsMapResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetSpellCheckFields }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tunnel.generic.idol.ciroppina.it/", name = "getSpellCheckFields")
+    public JAXBElement<GetSpellCheckFields> createGetSpellCheckFields(GetSpellCheckFields value) {
+        return new JAXBElement<GetSpellCheckFields>(_GetSpellCheckFields_QNAME, GetSpellCheckFields.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetHitIndexedContent }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tunnel.generic.idol.ciroppina.it/", name = "getHitIndexedContent")
+    public JAXBElement<GetHitIndexedContent> createGetHitIndexedContent(GetHitIndexedContent value) {
+        return new JAXBElement<GetHitIndexedContent>(_GetHitIndexedContent_QNAME, GetHitIndexedContent.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Grl }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tunnel.generic.idol.ciroppina.it/", name = "grl")
+    public JAXBElement<Grl> createGrl(Grl value) {
+        return new JAXBElement<Grl>(_Grl_QNAME, Grl.class, null, value);
     }
 
     /**
@@ -425,24 +523,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetQueryHitsMap }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://tunnel.generic.idol.ciroppina.it/", name = "getQueryHitsMap")
-    public JAXBElement<GetQueryHitsMap> createGetQueryHitsMap(GetQueryHitsMap value) {
-        return new JAXBElement<GetQueryHitsMap>(_GetQueryHitsMap_QNAME, GetQueryHitsMap.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetSpellCheckFieldsResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://tunnel.generic.idol.ciroppina.it/", name = "getSpellCheckFieldsResponse")
-    public JAXBElement<GetSpellCheckFieldsResponse> createGetSpellCheckFieldsResponse(GetSpellCheckFieldsResponse value) {
-        return new JAXBElement<GetSpellCheckFieldsResponse>(_GetSpellCheckFieldsResponse_QNAME, GetSpellCheckFieldsResponse.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link AutnResponseAsStringResponse }{@code >}}
      * 
      */
@@ -461,33 +541,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetQueryHitsNoDocumentMap }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://tunnel.generic.idol.ciroppina.it/", name = "getQueryHitsNoDocumentMap")
-    public JAXBElement<GetQueryHitsNoDocumentMap> createGetQueryHitsNoDocumentMap(GetQueryHitsNoDocumentMap value) {
-        return new JAXBElement<GetQueryHitsNoDocumentMap>(_GetQueryHitsNoDocumentMap_QNAME, GetQueryHitsNoDocumentMap.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetQueryHitsNoDocumentMapResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://tunnel.generic.idol.ciroppina.it/", name = "getQueryHitsNoDocumentMapResponse")
-    public JAXBElement<GetQueryHitsNoDocumentMapResponse> createGetQueryHitsNoDocumentMapResponse(GetQueryHitsNoDocumentMapResponse value) {
-        return new JAXBElement<GetQueryHitsNoDocumentMapResponse>(_GetQueryHitsNoDocumentMapResponse_QNAME, GetQueryHitsNoDocumentMapResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Getversion }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://tunnel.generic.idol.ciroppina.it/", name = "getversion")
-    public JAXBElement<Getversion> createGetversion(Getversion value) {
-        return new JAXBElement<Getversion>(_Getversion_QNAME, Getversion.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link GetQueryResponseResponse }{@code >}}
      * 
      */
@@ -497,21 +550,21 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetversionResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://tunnel.generic.idol.ciroppina.it/", name = "getversionResponse")
-    public JAXBElement<GetversionResponse> createGetversionResponse(GetversionResponse value) {
-        return new JAXBElement<GetversionResponse>(_GetversionResponse_QNAME, GetversionResponse.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link Getlicenseinfo }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://tunnel.generic.idol.ciroppina.it/", name = "getlicenseinfo")
     public JAXBElement<Getlicenseinfo> createGetlicenseinfo(Getlicenseinfo value) {
         return new JAXBElement<Getlicenseinfo>(_Getlicenseinfo_QNAME, Getlicenseinfo.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link CategorySuggestFromText }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tunnel.generic.idol.ciroppina.it/", name = "categorySuggestFromText")
+    public JAXBElement<CategorySuggestFromText> createCategorySuggestFromText(CategorySuggestFromText value) {
+        return new JAXBElement<CategorySuggestFromText>(_CategorySuggestFromText_QNAME, CategorySuggestFromText.class, null, value);
     }
 
 }
